@@ -3,10 +3,29 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: var(--page-color);
 }
 
+body {
+    background-color: var(--page-color);
 
+}
+
+body a:hover {
+    color: var(--hover-select_color);
+}
+
+body p::selection, 
+body a::selection, 
+body h1::selection, 
+body h2::selection, 
+body h3::selection, 
+body h4::selection, 
+body h5::selection, 
+body h6::selection
+{
+    color: var(--footer-color);
+    background: var(--hover-select_color);
+}
 /* End Global */
 
 /* Start Global Variables */
@@ -21,6 +40,8 @@ font-family: 'Playfair Display', serif; */
     --main-color: #5D554B;
     --navbar_color: #707070;
     --title-color: #444444;
+    --footer-color: #F4F8F9;
+    --hover-select_color: #EF6966;
 
     --font-title: 'Playfair Display', serif;
     --font-logo: 'Montserrat', sans-serif;
@@ -179,7 +200,7 @@ header .navbar .logo h1 {
     color: var(--title-color);
 }
 
-.author .author_desc {
+.author .author_desc p {
     font-family: var(--font-text);
     font-weight: var(--font-regular);
     font-size: 12px;
@@ -204,11 +225,12 @@ header .navbar .logo h1 {
     color: var(--navbar_color);
     margin-top: 50px;
 }
-.tags .tags_words {
+.tags .tags_words p {
     font-family: var(--font-title);
     font-weight: var(--font-regular);
     font-size: 12px;
-    color: #EF6966;
+    color: var(--hover-select_color);
+    display: inline;
 }
 
 /* End Author */
@@ -242,6 +264,16 @@ header .navbar .logo h1 {
     height: 1px;
 }
 
+.scroll_arrow {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    margin-top: 30px;
+}
+.scroll_arrow img {
+    margin-left: 92%;
+}
+
 
 /* Start related_post */
 .related_post {
@@ -260,32 +292,29 @@ header .navbar .logo h1 {
     flex-direction: column;
 }
 
+.related_post .post_img, .related_post .post_img_2, .related_post .post_img_3 {
+    width: 285px;
+    height: 185px;
+}
+
 .related_post .post_img {
     background-image: url(/img/flower.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    width: 285px;
-    height: 185px;
-    margin-top: 71px;
+    
 }
 .related_post .post_img_2 {
     background-image: url(/img/person_writing.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    width: 285px;
-    height: 185px;
-    margin-top: 71px;
 }
 .related_post .post_img_3 {
     background-image: url(/img/read_more.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    width: 285px;
-    height: 185px;
-    margin-top: 71px;
 }
 
 .post_category {
@@ -298,6 +327,7 @@ header .navbar .logo h1 {
     font-weight: var(--font-regular);
     font-size: 12px;
     color: var(--navbar_color);
+    margin-top: 15px;
 }
 
 .related_post .post_title h2 {
@@ -325,9 +355,207 @@ header .navbar .logo h1 {
     font-weight: var(--font-bold);
     color: var(--title-color);
     text-decoration: none;
+    width: fit-content;
 }
 
 /* End related_post */
 
 
 /* End related_article */
+
+
+
+/* Start Footer */
+
+.footer {
+    width: 100%;
+    height: fit-content;
+    background-color: var(--main-color);
+    color: var(--footer-color);
+    margin-top: 175px;
+    padding: 22px 0 18px;
+    /* box-sizing: content-box; */
+}
+
+.footer_container {
+    width: 77.5%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+.footer .sec_1 {
+    width: 24%;
+}
+
+footer a {
+    color: var(--footer-color);
+}
+
+.sec_1 .copyright {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.sec_1 .quote {
+    font-family: var(--font-details);
+    font-weight: var(--font-regular);
+    font-size: 14px;
+    word-spacing: 1px;
+    margin-bottom: 20px;
+}
+/* this how to Change Text Selection Color */
+.sec_1 .quote::-moz-selection { /* Code for Firefox */
+        color: var(--hover-select_color);
+        background: var(--footer-color);
+      }
+.sec_1 .quote::selection {
+    /* ::-moz-selection { Code for Firefox
+        color: red;
+        background: yellow;
+      } */
+    outline: none;
+    background: var(--hover-select_color);
+}
+
+.newsletter_footer .newsletter_title{
+    font-family: var(--font-text);
+    font-weight: var(--font-light);
+    font-size: 10px;
+    margin-bottom: 11px;
+}
+.newsletter_footer .news_form .subs_btn{
+    font-family: var(--font-text);
+    font-weight: var(--font-regular);
+    font-size: 9px;
+    text-decoration: none;
+}
+
+.newsletter_footer .news_form .subs_btn:hover {
+    color: var(--hover-select_color);
+}
+
+.news_form {
+    border-bottom: 1px white solid;
+    display: flex;
+    align-items: center;
+    margin-top: 11px;
+    margin-bottom: 79px;
+}
+form.news_form:hover {
+    border-bottom: 1px var(--hover-select_color) solid;
+}
+
+input[type=email] {
+    width: 80%;
+    box-sizing: border-box;
+    border: none;
+    /* border-bottom: 1px white solid; */
+    background-color: var(--main-color);
+    background-image: url(/img/email.svg);
+    background-repeat: no-repeat;
+    background-position: 96%;
+    outline: none;
+    transition: width 0.4s ease-in-out; 
+    color: var(--footer-color);
+    font-size: 12px;
+}
+input[type=email]:focus {
+    width: 100%; 
+}
+
+#email::placeholder {
+    color: var(--footer-color);
+    opacity: 1; /* Firefox */
+    font-size: 8px;
+    font-family: var(--font-text);
+    font-weight: var(--font-regular);
+}
+/* #email:hover::placeholder {
+    color: #EF6966;
+    
+} */
+
+.copyright p{
+    font-family: var(--font-text);
+    font-weight: var(--font-light);
+    font-size: 10px;
+    padding-left: 16px;
+}
+.copyright h6{
+    font-family: 'Freestyle Script';
+    font-weight: var(--font-regular);
+    font-size: 30px;
+}
+
+
+.footer_tags .tags_title {
+    font-family: var(--font-details);
+    font-size: 12px;
+    font-weight: var(--font-light);
+    color: var(--footer-color);
+    margin-bottom: 9px;
+}
+
+.footer_tags .footer_tags_p {
+    font-family: var(--font-details);
+    font-size: 12px;
+    font-weight: var(--font-regular);
+    color: var(--footer-color);
+    word-spacing: 2px;
+    line-height: 1.7;
+}
+
+.footer_info .email_title {
+    font-family: var(--font-text);
+    font-size: 10px;
+    font-weight: var(--font-light);
+    color: var(--footer-color);
+    margin-bottom: 5px;
+}
+
+.footer_info .mailto {
+    font-family: var(--font-title);
+    font-size: 14px;
+    font-weight: var(--font-regular);
+    color: var(--footer-color);
+    text-decoration: none;
+    word-spacing: 2px;
+}
+
+.footer_info .mailto:hover {
+    color: var(--hover-select_color);
+}
+
+
+.footer_info .pages {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 28px;
+    margin-bottom: 55px;
+}
+.footer_info .pages a {
+    font-family: var(--font-text);
+    font-size: 12px;
+    font-weight: var(--font-regular);
+    color: var(--footer-color);
+    text-decoration: none;
+    margin-bottom: 5px;
+}
+.footer_info .pages a:hover {
+    color: var(--hover-select_color);
+}
+
+.footer_info .social_media a {
+    text-decoration: none;
+}
+.footer_info .social_media a:hover {
+    filter: invert(50%) sepia(43%) saturate(895%) hue-rotate(314deg) brightness(102%) contrast(87%);
+}
+.footer_info .social_media img {
+    filter: invert(96%) sepia(9%) saturate(159%) hue-rotate(349deg) brightness(94%) contrast(89%);
+    margin-right: 5px;
+}
+
+/* End Footer */
