@@ -125,7 +125,7 @@ header .navbar .logo h1 {
 }
 
 .blog_picture{
-    background: url(/img/cofee.jpg);
+    background: url(./img/cofee.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -153,7 +153,7 @@ header .navbar .logo h1 {
 }
 
 .blog_text .image {
-    background: url(/img/ancient_computer.jpg);
+    background: url(./img/ancient_computer.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -163,7 +163,7 @@ header .navbar .logo h1 {
 }
 
 .blog_text .image_2 {
-    background: url(/img/office.jpg);
+    background: url(./img/office.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -184,7 +184,7 @@ header .navbar .logo h1 {
 }
 
 .author .author_img {
-    background-image: url(/img/a_person.jpg);
+    background-image: url(./img/a_person.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -298,20 +298,20 @@ header .navbar .logo h1 {
 }
 
 .related_post .post_img {
-    background-image: url(/img/flower.jpg);
+    background-image: url(./img/flower.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     
 }
 .related_post .post_img_2 {
-    background-image: url(/img/person_writing.jpg);
+    background-image: url(./img/person_writing.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }
 .related_post .post_img_3 {
-    background-image: url(/img/read_more.jpg);
+    background-image: url(./img/read_more.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -452,7 +452,7 @@ input[type=email] {
     border: none;
     /* border-bottom: 1px white solid; */
     background-color: var(--main-color);
-    background-image: url(/img/email.svg);
+    background-image: url(./img/email.svg);
     background-repeat: no-repeat;
     background-position: 96%;
     outline: none;
